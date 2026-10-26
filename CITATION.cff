@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software or its model outputs, please cite the associated manuscript."
+title: "Beyond Recall: reproduction code and model outputs"
+type: software
+authors:
+  - family-names: Kabiru
+    given-names: Kenneth Mwangi
+    affiliation: University of Leeds
+version: 1.0.0
+date-released: 2026-10-26
+license: AGPL-3.0-only

@@ -205,6 +205,13 @@ cython_debug/
 # Temporary file for partial code execution
 tempCodeRunnerFile.py
 
+# Local reproduction outputs
+generated/
+ssw_runs/
+ssw2_runs/
+ssw_cache/
+ssw2_outputs/
+
 # Ruff stuff:
 .ruff_cache/
 
