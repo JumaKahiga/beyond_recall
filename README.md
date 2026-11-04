@@ -34,7 +34,7 @@ The thesis results were produced in isolated interpreters with Python 3.9.13, Nu
 
 Protocol 1.1 excludes the complete five-second window containing each finite, nonnegative zero-duration annotation timestamp from the common pool for every species. At an exact boundary, the timestamp belongs to the window starting there; a timestamp in a discarded tail or at the recording end does not create a window. This rule scans the original annotation table, without a list of specific rows or recordings. Exclusions are deduplicated and combined with unknown-call exclusions. Source rows remain unchanged. The construction output retains all masks and reports overlapping versus additional exclusions, the remaining windows, budget, flagged-set size and target eligibility. Other invalid times still stop construction.
 
-Embeddings, acquired-window identities and audit traces are not part of this repository. A complete rerun creates those intermediate artifacts in its own output directory, and section 13 exports the verified results as a ZIP.
+Embeddings, acquired-window identities and audit traces are not part of this repository. The acquired-window identities and audit traces from the thesis run are available from the author on request. A complete rerun creates those intermediate artifacts in its own output directory, and section 13 exports the verified results as a ZIP.
 
 The interpretation is conditional on the selected targets and fixed recording pool. A cache-based classifier run does not independently rerun embedding inference. CPU/GPU regeneration can differ numerically despite matching checkpoint weights.
 
