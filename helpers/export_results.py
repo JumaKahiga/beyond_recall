@@ -11,7 +11,7 @@ RESULTS=['verification.json','history_results.json','audit_traces.json','bootstr
 
 def selected_files(root):
     study=load(root/'STUDY_MANIFEST.json');project=load(root/'project.json')
-    names=set(['study.json','models.json','dataset.json','dependencies.json','project.json','STUDY_MANIFEST.json',
+    names=set(['study.json','models.json','dataset.json','requirements.txt','project.json','STUDY_MANIFEST.json',
                'EXECUTION_MANIFEST.json','EXECUTION_MANIFEST.json.sha256','REPORT.md'])
     names.update(cache.files(root,True))
     names.update(project['scientific_source_sha256']);names.update(project['helper_source_sha256'])

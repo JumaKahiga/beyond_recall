@@ -5,7 +5,7 @@ from artifacts import ROOT, load, dump, sha, canonical_hash
 
 SMALL=['study.json','dataset.json','data/constructed/RECORDING_PERMUTATION.json',
        'data/source/annotations.csv','data/source/species.csv','data/source/recording_location.txt','data/source/zip_tail.bin']
-CONFIG=['project.json','models.json','dependencies.json']
+CONFIG=['project.json','models.json','requirements.txt']
 SELECTION='data/constructed/RECORDING_SELECTION.json'
 AUDIO_PATTERN=re.compile(r'SSW_\d{3}_\d{8}_\d{6}Z\.flac')
 

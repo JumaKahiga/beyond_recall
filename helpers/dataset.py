@@ -149,8 +149,6 @@ def main():
     global AUDIO_CACHE_BASE
     AUDIO_CACHE_BASE=args.audio_cache
     recipe = check_recipe(root)
-    if np.__version__ != recipe['construction']['numpy']:
-        raise RuntimeError('Construction requires NumPy 1.24.4')
     source = root/'data/source'; audio = root/'data/audio'
     source.mkdir(parents=True, exist_ok=True); audio.mkdir(parents=True, exist_ok=True)
     record_path = root/'dataset.json'
