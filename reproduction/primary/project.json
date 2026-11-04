@@ -1,0 +1,28 @@
+{
+  "study_sha256": "7923569a4f14da5bbafc0e879a2540dffd969af049bbf1a71968ddec53fa60f2",
+  "scientific_source_sha256": {
+    "learning.py": "b55f99fe53183d03232bf42f5a2d1974ad411192ee5bc07f81ea131ef5b67dc6",
+    "stopping.py": "cdef04dfd778885c76ee03ce67926c0bd839ee300170141f9b84f688e154679c",
+    "evaluate.py": "d991944d10e738141f4edd7add3c7e920315aa56dfe9c62220bdbd54b75abdbd",
+    "run_experiment.py": "f25429517485fa0d1b6eb55a80611f9535707276a3a582fb52991179c7cca1fe",
+    "analyze.py": "cac1d2e3c314f90e26c4ef0066ea357a048dd56d0bd07c7e73ef2ae9fa6ca34e",
+    "construction.py": "52b342e2039bd95a4ac835f8e583a9b418b1da04b9e699c4723aab58adac3fc2",
+    "embedding.py": "993cea475a2e58df990e8fcf158eaf2dcc4c703c4372b445854440faa90bcf0f"
+  },
+  "helper_source_sha256": {
+    "artifacts.py": "7b35b106795efa2a93b61d4790b3950490c8f5d652af13a27e31066104788e45",
+    "audio_store.py": "ddfcba6f815a989bde4a69d23e67d4cd0167472673eccc9177c35ad4fdb00fff",
+    "audit.py": "086e36cda995592a4422f52a389a6b59d1847a55811b428ab85e274f89d2ef76",
+    "audit_numeric.py": "94008db53616d43253fc6d438ffbe3da1dd336622f2a392bc585d8b42846ac68",
+    "cache.py": "786c5c1d957e789a9406dfce53c23ae0b7db58fa4727916a80a01d98c6523203",
+    "dataset.py": "9fcd99e75efb1f90f05af82557940366e873e4d9fee76f5960195eb09ceefb3b",
+    "environment.py": "d537229e2383ee96cab6b13fc56931dbfcf42bba5b11aa223eceff2df20388d1",
+    "export_results.py": "4003b8abf2ca0a0cbcb09caf814fb9dc0049d258baced08ed50fee3441b64f31",
+    "freeze.py": "3180b5e22f591ce9883566f3d904ff3e6dc8f43c7809a2664d2f8da653d94c75",
+    "hypergeom_exact.py": "e3ce75ce05367b63a9793f86c9cdb1850497734404a19c9ef83838d80710b480",
+    "reproduce_statistics.py": "bac64bf44e3571775d1bdea51edc6cd69a2bbe89c22d8fe6e4cdc805e15e27a3",
+    "support.py": "07c891e3186a234610f93f2f6b377c4a534498447c763ee8fbdf738b43362337",
+    "transport.py": "ff80d4ddc3145198d0a3c1511bf3b1e236600568c4ea7292963ba69df34dcd3a",
+    "verify.py": "b8daa5b975b52f7d6d34ab33f700a9bd54f984d20b1c19c62f8c42919458918f"
+  }
+}

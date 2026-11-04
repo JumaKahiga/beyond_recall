@@ -1,0 +1,27 @@
+{
+  "contains_external_results": false,
+  "files": {
+    ".gitignore": "42e9274f4ead5cc48d75cc39858f1adb8e0b9a4d442d02435ed7a0a5cbc81ac2",
+    "README.md": "e01264352a569199bded617750894168857d3a2f6de81af67f66a2368e9cf488",
+    "SSW_Reproducibility.ipynb": "10b55f3a86ce12e48bb8ee1249e262dc0749e0c7e5bab3abbbe20ee80b0a9a88",
+    "dataset.json": "b254dfc323f7a95698e1b92cb9e1692e8ef4a81c9dc53fbbd71370dc274f3677",
+    "dependencies.json": "04b2a8bfaeead07689ed5b9eef73a0c1bca477bebf5af1c60072f44c153e4a83",
+    "helpers/artifacts.py": "7b35b106795efa2a93b61d4790b3950490c8f5d652af13a27e31066104788e45",
+    "helpers/audio_store.py": "ddfcba6f815a989bde4a69d23e67d4cd0167472673eccc9177c35ad4fdb00fff",
+    "helpers/audit.py": "086e36cda995592a4422f52a389a6b59d1847a55811b428ab85e274f89d2ef76",
+    "helpers/audit_numeric.py": "28fa4900970d89cf6233703cb7000a310dc09966c5226bfdd00a35fa81f35474",
+    "helpers/cache.py": "786c5c1d957e789a9406dfce53c23ae0b7db58fa4727916a80a01d98c6523203",
+    "helpers/dataset.py": "9fcd99e75efb1f90f05af82557940366e873e4d9fee76f5960195eb09ceefb3b",
+    "helpers/environment.py": "d537229e2383ee96cab6b13fc56931dbfcf42bba5b11aa223eceff2df20388d1",
+    "helpers/export_results.py": "4003b8abf2ca0a0cbcb09caf814fb9dc0049d258baced08ed50fee3441b64f31",
+    "helpers/freeze.py": "3180b5e22f591ce9883566f3d904ff3e6dc8f43c7809a2664d2f8da653d94c75",
+    "helpers/hypergeom_exact.py": "e3ce75ce05367b63a9793f86c9cdb1850497734404a19c9ef83838d80710b480",
+    "helpers/reproduce_statistics.py": "bac64bf44e3571775d1bdea51edc6cd69a2bbe89c22d8fe6e4cdc805e15e27a3",
+    "helpers/support.py": "07c891e3186a234610f93f2f6b377c4a534498447c763ee8fbdf738b43362337",
+    "helpers/transport.py": "ff80d4ddc3145198d0a3c1511bf3b1e236600568c4ea7292963ba69df34dcd3a",
+    "helpers/verify.py": "b8daa5b975b52f7d6d34ab33f700a9bd54f984d20b1c19c62f8c42919458918f",
+    "models.json": "1f0f924b8bff5884922db981d514db0853abb73319f2606f71a631b8f3cbf4d0",
+    "project.json": "59f167d3d8b65d0a43c986837e7f68839825c309f5c6e21eb732474ba1602cf4",
+    "study.json": "7923569a4f14da5bbafc0e879a2540dffd969af049bbf1a71968ddec53fa60f2"
+  }
+}

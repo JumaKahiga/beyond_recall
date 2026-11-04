@@ -1,0 +1,21 @@
+{
+  "additional_seeds_or_dataset_run": false,
+  "bootstrap_indices_sha256": "cde40c117cbcf16e8d7ac2392f609ad36972995359884224aafe05227d7deda3",
+  "execution_sha256": "54b6a3a4571eeaa2570a04253532da67fd00e631a4fd36f6e4174306eb4698a3",
+  "gates": {
+    "all_costs_within_cap": true,
+    "approximate_95_lower_positive": false,
+    "integrity": true,
+    "mean_delta_Y_at_least_0_10": false
+  },
+  "histories": 100,
+  "interpretation": "Acquisition randomization conditional on the fixed selected target tasks and external pool; approximate percentile interval.",
+  "primary_practical_criterion_met": false,
+  "primary_target_losses": [
+    "rewbla"
+  ],
+  "primary_target_losses_at_least_0_10": [],
+  "status": "EXTERNAL_COMPARISON_COMPLETE",
+  "targets": 5,
+  "workflow_rows": 800
+}

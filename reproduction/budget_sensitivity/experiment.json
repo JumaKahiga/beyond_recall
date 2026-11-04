@@ -1,0 +1,239 @@
+{
+  "N": 22052,
+  "acceptance_benchmark": 0.8,
+  "acquisition": {
+    "snapshots": "startup + k*500, then exactly horizon; actual acquisition refits only",
+    "startup": "python Random(seed).shuffle, paid until both classes or horizon",
+    "strategy": "clipped scalar natural-log binary entropy, lexical ID ties"
+  },
+  "affiliation": "University of Leeds",
+  "alpha": "1/20",
+  "analysis": {
+    "benchmark_reporting": "Report point estimate > 0.80 and lower endpoint > 0.80 separately; latter conditional on fixed targets and pool.",
+    "bootstrap_seed": 991250000,
+    "interval": "paired target-stratified percentile 95%, linear quantiles",
+    "numerical_tolerance": 1e-10,
+    "resamples": 20000,
+    "secondary": "Three other fixed rankers; per-target outcomes; expected cost; feasibility/cutoff changes; descriptive intervals, no family-wide claim"
+  },
+  "audit_policy": "unchanged: maximum feasible cutoff at n_max, then minimum sample for that cutoff; one attempt per budget arm",
+  "audit_seed_base": 991230000,
+  "author": "Kenneth Mwangi Kabiru",
+  "budgets_percent": [
+    25,
+    30
+  ],
+  "expected_baseline_rows": 400,
+  "expected_histories": 100,
+  "expected_rows": 800,
+  "flagged_count": 2205,
+  "models": {
+    "fit_order": "frozen pool order",
+    "lr": {
+      "C": 1,
+      "class_weight": "balanced",
+      "fit_intercept": true,
+      "max_iter": 200,
+      "penalty": "l2",
+      "scaler": null,
+      "solver": "lbfgs",
+      "tol": 0.0001
+    },
+    "random_state": "acquisition_seed",
+    "ranking": "ordinal ranks descending score, pool-order score ties; fusion tie by LR rank then pool index",
+    "svm": {
+      "C": 1,
+      "cache_size": 200,
+      "class_weight": "balanced",
+      "gamma": "scale",
+      "kernel": "rbf",
+      "max_iter": -1,
+      "probability": false,
+      "scaler": "StandardScaler fitted to endpoint training rows only",
+      "shrinking": true,
+      "tol": 0.001
+    }
+  },
+  "primary_question": "Does equal-target-weight mean correct acceptance exceed 80% at a 30% unique-label cap?",
+  "primary_workflow": "fixed_lr",
+  "reference_25_sha256": "32d0c020f65b788bc4d405fc7ba25229b7dec8dd6863bf1c383d612de20227e3",
+  "rho": "9/10",
+  "runtime": {
+    "numpy": "1.24.4",
+    "python": "3.9.13",
+    "scikit_learn": "1.1.1",
+    "scipy": "1.9.1",
+    "thread_limit": 1
+  },
+  "scope_limits": [
+    "No new recordings, targets, seeds or training choices",
+    "No stopping-rule or budget-grid search",
+    "No outcome-selected audit design",
+    "No repeated attempt after observing a failed audit",
+    "No independent replication claim for reuse of saved scores",
+    "No replacement of the original 25% comparison"
+  ],
+  "status": "Specified after viewing the 25% results; 30% comparison not yet executed",
+  "targets": [
+    {
+      "code": "amegfi",
+      "common_name": "American Goldfinch",
+      "positive_windows": 669,
+      "seeds": [
+        991210101,
+        991210102,
+        991210103,
+        991210104,
+        991210105,
+        991210106,
+        991210107,
+        991210108,
+        991210109,
+        991210110,
+        991210111,
+        991210112,
+        991210113,
+        991210114,
+        991210115,
+        991210116,
+        991210117,
+        991210118,
+        991210119,
+        991210120
+      ]
+    },
+    {
+      "code": "eastow",
+      "common_name": "Eastern Towhee",
+      "positive_windows": 180,
+      "seeds": [
+        991210201,
+        991210202,
+        991210203,
+        991210204,
+        991210205,
+        991210206,
+        991210207,
+        991210208,
+        991210209,
+        991210210,
+        991210211,
+        991210212,
+        991210213,
+        991210214,
+        991210215,
+        991210216,
+        991210217,
+        991210218,
+        991210219,
+        991210220
+      ]
+    },
+    {
+      "code": "rewbla",
+      "common_name": "Red-winged Blackbird",
+      "positive_windows": 671,
+      "seeds": [
+        991210301,
+        991210302,
+        991210303,
+        991210304,
+        991210305,
+        991210306,
+        991210307,
+        991210308,
+        991210309,
+        991210310,
+        991210311,
+        991210312,
+        991210313,
+        991210314,
+        991210315,
+        991210316,
+        991210317,
+        991210318,
+        991210319,
+        991210320
+      ]
+    },
+    {
+      "code": "scatan",
+      "common_name": "Scarlet Tanager",
+      "positive_windows": 234,
+      "seeds": [
+        991210401,
+        991210402,
+        991210403,
+        991210404,
+        991210405,
+        991210406,
+        991210407,
+        991210408,
+        991210409,
+        991210410,
+        991210411,
+        991210412,
+        991210413,
+        991210414,
+        991210415,
+        991210416,
+        991210417,
+        991210418,
+        991210419,
+        991210420
+      ]
+    },
+    {
+      "code": "tuftit",
+      "common_name": "Tufted Titmouse",
+      "positive_windows": 311,
+      "seeds": [
+        991210501,
+        991210502,
+        991210503,
+        991210504,
+        991210505,
+        991210506,
+        991210507,
+        991210508,
+        991210509,
+        991210510,
+        991210511,
+        991210512,
+        991210513,
+        991210514,
+        991210515,
+        991210516,
+        991210517,
+        991210518,
+        991210519,
+        991210520
+      ]
+    }
+  ],
+  "title": "Sapsucker Woods: evaluation-budget sensitivity",
+  "training_horizon": 3000,
+  "version": "1.0",
+  "workflows": [
+    {
+      "id": "fixed_lr",
+      "ranker": "lr",
+      "stop": "fixed"
+    },
+    {
+      "id": "fixed_svm",
+      "ranker": "svm",
+      "stop": "fixed"
+    },
+    {
+      "id": "fixed_equal_blend",
+      "ranker": "equal_blend",
+      "stop": "fixed"
+    },
+    {
+      "id": "fixed_3to1_blend",
+      "ranker": "3to1_blend",
+      "stop": "fixed"
+    }
+  ]
+}

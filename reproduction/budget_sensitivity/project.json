@@ -1,0 +1,47 @@
+{
+  "execution_files": {
+    "EXPERIMENT.md": "5eae6cf25cdac5088175192f2ae528e23522a2ef8f559d059bd4a96f52c07c34",
+    "README.md": "bd721f55efa39a706013a3675bbc656ab80acc67781f79826f43da7c576ba98b",
+    "analyze_budget.py": "612c538f3dfb0b9916dfa981e9a0ee7fefed961407e52056a69744617cafe8d1",
+    "audit.py": "086e36cda995592a4422f52a389a6b59d1847a55811b428ab85e274f89d2ef76",
+    "audit_numeric.py": "28fa4900970d89cf6233703cb7000a310dc09966c5226bfdd00a35fa81f35474",
+    "budget_experiment.py": "7e58d6c99ff5868a72c6945f50a5d18069d9f247d780986040a2c82dfe3d2d3d",
+    "checks.py": "0852a9487d1d9a45218d1ce14cd1200f959f2461d7769fd551d532b015073efa",
+    "dependencies.json": "bf2f7eb3bfb2a5b80d3fbcfb8ae8ebba25888a452546b4a129aadc928ff48377",
+    "environment.py": "78fb8588772b652e0018e96727a764e8a0b2eab0311bbeb2fcd2b5f494b6f3a1",
+    "evaluate.py": "e5173742c4c7de67c03c78509883d56cdb91ac1873669302ff5734fad4e7fb3f",
+    "experiment.json": "bd30bca2502d083ae3b99d684861cda985e899b01b093925d8def4345eedc77e",
+    "export_results.py": "ebc132d7df623f5cdcfa93d7a80e83817eb7cbd95b89906dc32c434ec5fc8ed2",
+    "hypergeom_exact.py": "e3ce75ce05367b63a9793f86c9cdb1850497734404a19c9ef83838d80710b480",
+    "inputs.py": "3da35af27990b7bdadf6021705d6008089ee25328971958ec6e7a5d3ab7432be",
+    "learning.py": "b55f99fe53183d03232bf42f5a2d1974ad411192ee5bc07f81ea131ef5b67dc6",
+    "recheck_statistics.py": "d2eb8801975ca58a4e023da458363ec42dbd96637141b08c4c21116548e8b4b4",
+    "reference_25.json": "32d0c020f65b788bc4d405fc7ba25229b7dec8dd6863bf1c383d612de20227e3",
+    "support.py": "c095f984784515be5cbdde3bbf4f531fc106398df0d4a0970c6e9c2b685262ca"
+  },
+  "helper_files": [
+    "audit.py",
+    "audit_numeric.py",
+    "checks.py",
+    "environment.py",
+    "export_results.py",
+    "hypergeom_exact.py",
+    "inputs.py",
+    "recheck_statistics.py",
+    "support.py"
+  ],
+  "scientific_cells": [
+    "learning.py",
+    "evaluate.py",
+    "budget_experiment.py",
+    "analyze_budget.py"
+  ],
+  "scope": "Post hoc budget sensitivity; 25% reference only, no 30% results",
+  "static_files": [
+    "experiment.json",
+    "reference_25.json",
+    "dependencies.json",
+    "EXPERIMENT.md",
+    "README.md"
+  ]
+}

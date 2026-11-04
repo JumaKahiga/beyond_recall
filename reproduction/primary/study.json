@@ -1,0 +1,328 @@
+{
+  "acquisition": {
+    "snapshots": "startup + k*500, then exactly horizon; actual acquisition refits only",
+    "startup": "python Random(seed).shuffle, paid until both classes or horizon",
+    "strategy": "clipped scalar natural-log binary entropy, lexical ID ties"
+  },
+  "analysis": {
+    "bootstrap_seed": 991240000,
+    "interpretation": "acquisition randomness conditional on fixed selected tasks and pool",
+    "interval": "percentile 95%, linear quantiles",
+    "lower_endpoint_strictly_positive": true,
+    "metric": "equal target-weight mean of per-target mean correct acceptance over all 20 histories",
+    "numeric_tolerance": 1e-10,
+    "paired": true,
+    "practical_delta_Y": 0.1,
+    "primary": [
+      "fixed_equal_blend",
+      "fixed_lr"
+    ],
+    "resamples": 20000,
+    "resampling": "independent within-target replicate resampling with pairing across workflows",
+    "target_loss_reporting": "all target effects; explicitly discuss mean primary loss >=0.10"
+  },
+  "audit": {
+    "attempts_per_workflow": 1,
+    "audit_changes_flagged_set": false,
+    "design": "max feasible c at n_max, then min n; exact null <=1/20",
+    "early_acceptance": false,
+    "early_failure": true,
+    "seed_base": 991230000
+  },
+  "constants": {
+    "alpha": "1/20",
+    "batch_size": 500,
+    "rho": "9/10",
+    "training_horizon": 3000
+  },
+  "construction": {
+    "annotation_times": "source decimal strings, exact positive-duration overlap",
+    "complete_duration_seconds": [
+      3600,
+      3605
+    ],
+    "fewer_targets": "use all",
+    "flagged_count": "N//10",
+    "generator": "numpy.random.Generator(numpy.random.PCG64)",
+    "geometric_eligibility": "9*P <= 10*K",
+    "incomplete_tail": "discard",
+    "inventory_order": "base filename lexical",
+    "label_cap": "N//4",
+    "malformed_annotation": "halt on negative, reversed, nonfinite, unparseable or out-of-range times and missing identifiers/schema; equal endpoints use the declared common-window exclusion",
+    "maximum_targets": 5,
+    "minimum_positive_recordings": 3,
+    "minimum_positive_windows": 100,
+    "no_targets": "construction failure; no redraw",
+    "numpy": "1.24.4",
+    "pool_order": "lexical filename, then integer window",
+    "recording_seed": 991200000,
+    "recordings": 33,
+    "sample_rate": 32000,
+    "species_seed": 991200001,
+    "unknown_code": "????",
+    "unknown_policy": "common exclusion including identified co-occurrences",
+    "upper_duration_exclusive": true,
+    "window_samples": 160000,
+    "zero_duration_annotation": {
+      "duplicates": "exclude each window once; report overlap with unknown-call exclusions",
+      "outside_complete_windows": "report row; do not invent a complete window",
+      "rule": "exclude_containing_complete_window",
+      "scope": "common pool across all target species",
+      "source_rows": "retain unmodified; report all rows and selected-recording window IDs",
+      "window": "[5*j,5*(j+1)); j=floor(timestamp/5)"
+    }
+  },
+  "dataset": {
+    "audio": "original FLAC",
+    "files": {
+      "annotations.csv": "517eb9700f88ec9ac054a8aec7c805ec",
+      "recording_location.txt": "9cb263d771a74887bfcb08fcac592ef0",
+      "soundscape_data.zip": "4dc5a3e83494a638d80bc7b3d1517137",
+      "species.csv": "ab7dd85025230327deb7cf3eef0282cb"
+    },
+    "name": "Sapsucker Woods",
+    "record": "7079380",
+    "url": "https://zenodo.org/records/7079380",
+    "version": 2
+  },
+  "embedding": {
+    "authority": "google/bird-vocalization-classifier/tensorFlow2/perch_v2",
+    "batch_size": 32,
+    "channel_pooling": "float32 mean",
+    "dim": 1536,
+    "dtype": "float32",
+    "embedding_pooling": "mean intermediate dimensions if rank > 2",
+    "runtime": "freeze before external inference; record numerical portability separately",
+    "sample_rate": 32000,
+    "version": 2,
+    "waveform_normalization": "subtract per-window float32 mean; divide by absolute peak then multiply 0.25; constant waveform to zero",
+    "window_samples": 160000
+  },
+  "maximum_rows": 800,
+  "models": {
+    "fit_order": "frozen pool order",
+    "lr": {
+      "C": 1,
+      "class_weight": "balanced",
+      "fit_intercept": true,
+      "max_iter": 200,
+      "penalty": "l2",
+      "scaler": null,
+      "solver": "lbfgs",
+      "tol": 0.0001
+    },
+    "random_state": "acquisition_seed",
+    "ranking": "ordinal ranks descending score, pool-order score ties; fusion tie by LR rank then pool index",
+    "svm": {
+      "C": 1,
+      "cache_size": 200,
+      "class_weight": "balanced",
+      "gamma": "scale",
+      "kernel": "rbf",
+      "max_iter": -1,
+      "probability": false,
+      "scaler": "StandardScaler fitted to endpoint training rows only",
+      "shrinking": true,
+      "tol": 0.001
+    }
+  },
+  "monitor": {
+    "fixed": true,
+    "generator": "PCG64(SeedSequence([base,acquisition_seed]))",
+    "indices_order": "sorted fixed-pool indices",
+    "labels_visible": false,
+    "queryable": true,
+    "seed_base": 991220000,
+    "size": 2000
+  },
+  "protocol_version": "1.1",
+  "replicates_per_target": 20,
+  "runtime": {
+    "numpy": "1.24.4",
+    "python": "3.9.13",
+    "scikit_learn": "1.1.1",
+    "scipy": "1.9.1",
+    "thread_limit": 1
+  },
+  "schema_version": 1,
+  "seed_assignment": {
+    "formula": "991210000 + 100*target_index + replicate",
+    "replicate": "1..20",
+    "reserved_acquisition_seeds": {
+      "1": [
+        991210101,
+        991210102,
+        991210103,
+        991210104,
+        991210105,
+        991210106,
+        991210107,
+        991210108,
+        991210109,
+        991210110,
+        991210111,
+        991210112,
+        991210113,
+        991210114,
+        991210115,
+        991210116,
+        991210117,
+        991210118,
+        991210119,
+        991210120
+      ],
+      "2": [
+        991210201,
+        991210202,
+        991210203,
+        991210204,
+        991210205,
+        991210206,
+        991210207,
+        991210208,
+        991210209,
+        991210210,
+        991210211,
+        991210212,
+        991210213,
+        991210214,
+        991210215,
+        991210216,
+        991210217,
+        991210218,
+        991210219,
+        991210220
+      ],
+      "3": [
+        991210301,
+        991210302,
+        991210303,
+        991210304,
+        991210305,
+        991210306,
+        991210307,
+        991210308,
+        991210309,
+        991210310,
+        991210311,
+        991210312,
+        991210313,
+        991210314,
+        991210315,
+        991210316,
+        991210317,
+        991210318,
+        991210319,
+        991210320
+      ],
+      "4": [
+        991210401,
+        991210402,
+        991210403,
+        991210404,
+        991210405,
+        991210406,
+        991210407,
+        991210408,
+        991210409,
+        991210410,
+        991210411,
+        991210412,
+        991210413,
+        991210414,
+        991210415,
+        991210416,
+        991210417,
+        991210418,
+        991210419,
+        991210420
+      ],
+      "5": [
+        991210501,
+        991210502,
+        991210503,
+        991210504,
+        991210505,
+        991210506,
+        991210507,
+        991210508,
+        991210509,
+        991210510,
+        991210511,
+        991210512,
+        991210513,
+        991210514,
+        991210515,
+        991210516,
+        991210517,
+        991210518,
+        991210519,
+        991210520
+      ]
+    },
+    "target_index": "1..J",
+    "target_order": "lexical selected species code"
+  },
+  "stopping": {
+    "confidence": {
+      "clip": false,
+      "consecutive_decreases": 3,
+      "statistic": "1 - sequential float64 mean binary entropy on monitor",
+      "strict": true,
+      "ties_reset": true,
+      "zero_log_zero": 0
+    },
+    "freeze": "current detection snapshot; no rollback",
+    "horizon": "test trigger first, otherwise horizon_without_trigger",
+    "sp": {
+      "arithmetic": "rational from integer contingency counts",
+      "predictions": "native LR class prediction; decision>0",
+      "threshold": "99/100",
+      "undefined_pair": "invalidates every window containing it",
+      "window_pairs": 3
+    }
+  },
+  "technical_integrity": "Stop on invalid inputs; preserve all declared histories and report all outcomes.",
+  "workflows": [
+    {
+      "id": "fixed_lr",
+      "ranker": "lr",
+      "stop": "fixed"
+    },
+    {
+      "id": "fixed_svm",
+      "ranker": "svm",
+      "stop": "fixed"
+    },
+    {
+      "id": "fixed_equal_blend",
+      "ranker": "equal_blend",
+      "stop": "fixed"
+    },
+    {
+      "id": "fixed_3to1_blend",
+      "ranker": "3to1_blend",
+      "stop": "fixed"
+    },
+    {
+      "id": "stability_lr",
+      "ranker": "lr",
+      "stop": "sp"
+    },
+    {
+      "id": "stability_blend",
+      "ranker": "equal_blend",
+      "stop": "sp"
+    },
+    {
+      "id": "confidence_lr",
+      "ranker": "lr",
+      "stop": "confidence_decline"
+    },
+    {
+      "id": "confidence_blend",
+      "ranker": "equal_blend",
+      "stop": "confidence_decline"
+    }
+  ]
+}

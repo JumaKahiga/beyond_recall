@@ -1,0 +1,36 @@
+{
+  "files": [
+    {
+      "checksum": "md5:ab7dd85025230327deb7cf3eef0282cb",
+      "key": "species.csv",
+      "links": {
+        "self": "https://zenodo.org/api/records/7079380/files/species.csv/content"
+      },
+      "size": 3490
+    },
+    {
+      "checksum": "md5:9cb263d771a74887bfcb08fcac592ef0",
+      "key": "recording_location.txt",
+      "links": {
+        "self": "https://zenodo.org/api/records/7079380/files/recording_location.txt/content"
+      },
+      "size": 78
+    },
+    {
+      "checksum": "md5:4dc5a3e83494a638d80bc7b3d1517137",
+      "key": "soundscape_data.zip",
+      "links": {
+        "self": "https://zenodo.org/api/records/7079380/files/soundscape_data.zip/content"
+      },
+      "size": 27762497845
+    },
+    {
+      "checksum": "md5:517eb9700f88ec9ac054a8aec7c805ec",
+      "key": "annotations.csv",
+      "links": {
+        "self": "https://zenodo.org/api/records/7079380/files/annotations.csv/content"
+      },
+      "size": 3179389
+    }
+  ]
+}
